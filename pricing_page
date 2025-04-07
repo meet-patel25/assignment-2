@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem Generator - Pricing Plans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .pricing-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: -100px auto 3rem;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-plan {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-5px);
+        }
+
+        .popular {
+            border: 2px solid #667eea;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 1rem;
+            right: -2rem;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+        }
+
+        .plan-name {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.8rem 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .plan-features i {
+            color: #667eea;
+        }
+
+        .plan-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .plan-button:hover {
+            background: #5a67d8;
+            transform: scale(1.02);
+        }
+
+        .plan-button.outline {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+        }
+
+        .plan-button.outline:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .benefits-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .benefits-section h2 {
+            color: #2d3748;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: #666;
+        }
+
+        .inspiration-quote {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                grid-template-columns: 1fr;
+                margin-top: -50px;
+            }
+
+            .pricing-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-header">
+        <h1>Choose Your Poetic Journey</h1>
+        <p>"Where words dance and imagination takes flight"</p>
+    </div>
+
+    <div class="pricing-container">
+        <div class="pricing-plan">
+            <h2 class="plan-name">Sonnet Starter</h2>
+            <div class="plan-price">$9<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-feather"></i> Generate up to 50 poems/month</li>
+                <li><i class="fas fa-check"></i> Basic poetry styles</li>
+                <li><i class="fas fa-check"></i> Simple customization options</li>
+                <li><i class="fas fa-check"></i> Basic rhyme suggestions</li>
+                <li><i class="fas fa-times"></i> Advanced poetry formats</li>
+            </ul>
+            <a href="#" class="plan-button outline">Begin Your Journey</a>
+        </div>
+
+        <div class="pricing-plan popular">
+            <div class="popular-badge">Most Popular</div>
+            <h2 class="plan-name">Poet's Paradise</h2>
+            <div class="plan-price">$19<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-feather"></i> Unlimited poem generation</li>
+                <li><i class="fas fa-check"></i> All poetry styles & formats</li>
+                <li><i class="fas fa-check"></i> Advanced customization</li>
+                <li><i class="fas fa-check"></i> AI-powered rhyme suggestions</li>
+                <li><i class="fas fa-check"></i> Poetry writing tutorials</li>
+            </ul>
+            <a href="#" class="plan-button">Embrace Your Muse</a>
+        </div>
+
+        <div class="pricing-plan">
+            <h2 class="plan-name">Masterpiece Maker</h2>
+            <div class="plan-price">$29<span>/month</span></div>
+            <ul class="plan-features">
+                <li><i class="fas fa-feather"></i> Everything in Poet's Paradise</li>
+                <li><i class="fas fa-check"></i> Professional editing tools</li>
+                <li><i class="fas fa-check"></i> Publishing assistance</li>
+                <li><i class="fas fa-check"></i> Personal poetry coach</li>
+                <li><i class="fas fa-check"></i> Private poetry workshops</li>
+            </ul>
+            <a href="#" class="plan-button outline">Craft Your Legacy</a>
+        </div>
+    </div>
+
+    <div class="benefits-section">
+        <h2>Why Choose Our Poetry Generator?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-magic"></i>
+                <h3>AI-Powered Creativity</h3>
+                <p>Advanced algorithms that understand the nuances of poetry</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Multiple Styles</h3>
+                <p>From haikus to sonnets, express yourself in any form</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Learn & Grow</h3>
+                <p>Improve your poetry skills with our tutorials and workshops</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="inspiration-quote">
+        "Poetry is not a turning loose of emotion, but an escape from emotion; it is not the expression of personality, but an escape from personality." - T.S. Eliot
+    </div>
+</body>
+</html>
