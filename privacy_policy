@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Poem Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .privacy-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-container {
+            max-width: 1200px;
+            margin: -100px auto 3rem;
+            padding: 0 20px;
+        }
+
+        .privacy-content {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .section ul {
+            list-style-type: none;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section ul li {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .section ul li:before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #666;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-container {
+                margin-top: -50px;
+            }
+
+            .privacy-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-header">
+        <h1>Privacy Policy</h1>
+        <p>Your privacy is important to us</p>
+    </div>
+
+    <div class="privacy-container">
+        <div class="privacy-content">
+            <div class="section">
+                <h2>Introduction</h2>
+                <p>Welcome to Poem Generator's Privacy Policy. This document outlines how we collect, use, and protect your personal information when you use our service.</p>
+            </div>
+
+            <div class="section">
+                <h2>Information We Collect</h2>
+                <p>We collect the following types of information:</p>
+                <ul>
+                    <li>Personal information (name, email address) when you create an account</li>
+                    <li>Generated poems and creative content</li>
+                    <li>Usage data and interaction with our services</li>
+                    <li>Technical information about your device and browser</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>How We Use Your Information</h2>
+                <p>Your information is used to:</p>
+                <ul>
+                    <li>Provide and improve our poem generation services</li>
+                    <li>Personalize your experience</li>
+                    <li>Communicate with you about updates and features</li>
+                    <li>Ensure the security of our platform</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Data Protection</h2>
+                <p>We implement various security measures to protect your personal information:</p>
+                <ul>
+                    <li>Encryption of sensitive data</li>
+                    <li>Regular security assessments</li>
+                    <li>Secure data storage practices</li>
+                    <li>Limited access to personal information</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Request corrections to your data</li>
+                    <li>Delete your account and associated data</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Cookies Policy</h2>
+                <p>We use cookies to enhance your experience on our website. These cookies help us understand how you interact with our services and improve our offerings.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>If you have any questions about our Privacy Policy, please contact us:</p>
+                <p>Email: privacy@poemgenerator.com</p>
+                <p>Address: Your Business Address</p>
+            </div>
+
+            <p class="last-updated">Last Updated: March 2024</p>
+        </div>
+    </div>
+</body>
+</html>
