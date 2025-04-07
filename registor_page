@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+        }
+
+        .register-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .register-header h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .register-header p {
+            color: #666;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #8B5CF6;
+        }
+
+        .terms {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        .terms input[type="checkbox"] {
+            margin-top: 4px;
+        }
+
+        .terms a {
+            color: #8B5CF6;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 12px;
+            background: #8B5CF6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .register-button:hover {
+            background: #7C3AED;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #8B5CF6;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .password-requirements {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .input-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Create Account</h1>
+            <p>Please fill in the information below</p>
+        </div>
+        
+        <form>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password" required>
+                <div class="password-requirements">
+                    Password must be at least 8 characters long with numbers and letters
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                </label>
+            </div>
+
+            <button type="submit" class="register-button">Create Account</button>
+
+            <div class="login-link">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
