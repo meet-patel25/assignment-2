@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AI Poem Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .blog-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: -100px auto 3rem;
+            padding: 0 20px;
+        }
+
+        .blog-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .main-content, .sidebar {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .blog-post:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .post-meta i {
+            color: #667eea;
+        }
+
+        .post-title {
+            color: #2d3748;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #764ba2;
+        }
+
+        /* Sidebar Styles */
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-title {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .categories-list, .recent-posts-list {
+            list-style: none;
+        }
+
+        .categories-list li, .recent-posts-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .categories-list a, .recent-posts-list a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .categories-list a:hover, .recent-posts-list a:hover {
+            color: #667eea;
+        }
+
+        .categories-list i {
+            margin-right: 0.5rem;
+            color: #667eea;
+        }
+
+        .search-box {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-button {
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .search-button:hover {
+            background: #764ba2;
+        }
+
+        @media (max-width: 968px) {
+            .blog-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-container {
+                margin-top: -50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .post-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-header">
+        <h1>AI Poem Generator Blog</h1>
+        <p>Insights, Updates, and Creative Inspirations</p>
+    </div>
+
+    <div class="blog-container">
+        <div class="blog-content">
+            <main class="main-content">
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3059748/pexels-photo-3059748.jpeg" alt="AI Poetry Generation">
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> March 15, 2024</span>
+                        <span><i class="far fa-user"></i> Meet Khambhadiya</span>
+                        <span><i class="far fa-folder"></i> AI Poetry</span>
+                    </div>
+                    <h2 class="post-title">The Future of AI Poetry Generation</h2>
+                    <p class="post-excerpt">Explore how artificial intelligence is revolutionizing the way we create and appreciate poetry. From understanding complex emotions to generating meaningful verses, AI is pushing the boundaries of creative writing.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg" alt="Writing Tips">
+                    </div>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> March 12, 2024</span>
+                        <span><i class="far fa-user"></i> Meet Khambhadiya</span>
+                        <span><i class="far fa-folder"></i> Writing Tips</span>
+                    </div>
+                    <h2 class="post-title">5 Tips for Better Poetry Writing</h2>
+                    <p class="post-excerpt">Whether you're using AI assistance or writing traditionally, these five essential tips will help you improve your poetry writing skills and create more impactful verses.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </main>
+
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Search blogs...">
+                        <button class="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <ul class="categories-list">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> AI Poetry (12)</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Writing Tips (8)</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Poetry Styles (15)</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Updates (6)</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Community (9)</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Recent Posts</h3>
+                    <ul class="recent-posts-list">
+                        <li><a href="#">Understanding Modern Poetry Generation</a></li>
+                        <li><a href="#">How AI Understands Human Emotions</a></li>
+                        <li><a href="#">The Evolution of Digital Poetry</a></li>
+                        <li><a href="#">Community Spotlight: Best Poems</a></li>
+                        <li><a href="#">Latest Features and Updates</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
